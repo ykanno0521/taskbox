@@ -1,13 +1,13 @@
-// tests/unit/TaskList.spec.js
+// tests/unit/PureTaskList.spec.js
 
 import Vue from 'vue';
-import TaskList from '../../src/components/TaskList.vue';
+import PureTaskList from '../../src/components/PureTaskList.vue';
 //👇 Our story imported here
-import { WithPinnedTasks } from '../../src/stories/TaskList.stories';
+import { WithPinnedTasks } from '../../src/components/PureTaskList.stories';
 
 it('renders pinned tasks at the start of the list', () => {
-  // render Tasklist
-  const Constructor = Vue.extend(TaskList);
+  // render PureTaskList
+  const Constructor = Vue.extend(PureTaskList);
   const vm = new Constructor({
     //👇 Story's args used with our test
     propsData: WithPinnedTasks.args,
