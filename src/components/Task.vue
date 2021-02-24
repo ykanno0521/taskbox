@@ -3,13 +3,7 @@
 <template>
   <div class="list-item" :class="task.state">
     <label class="checkbox">
-      <input
-        type="text"
-        :value="task.title"
-        readonly
-        placeholder="Input title"
-        style="background: red;"
-      />
+      <input type="checkbox" :checked="isChecked" disabled name="checked" />
       <span class="checkbox-custom" @click="$emit('archive-task', task.id)" />
     </label>
     <div class="title">
@@ -18,6 +12,7 @@
         :value="task.title"
         readonly
         placeholder="Input title"
+        style="text-overflow: ellipsis;"
       />
     </div>
 
